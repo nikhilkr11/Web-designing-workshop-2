@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    background: skyblue;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+}
+
+.fuel-bar {
+    width: 200px;
+    height: 20px;
+    background: #555;
+    margin-top: 10px;
+}
+
+.fuel {
+    width: 70%;
+    height: 100%;
+    background: limegreen;
+}
+
+.sun {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+}
+
+.cloud {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    animation: moveCloud 25s linear infinite;
+}
+
+.cloud1 {
+    top: 80px;
+    left: -200px;
+}
+
+.cloud2 {
+    top: 150px;
+    left: -400px;
+    animation-delay: 10s;
+}
+
+@keyframes moveCloud {
+    from { left: -200px; }
+    to { left: 110%; }
+}
+
+.hill {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 200%;
+    height: 200px;
+    background: green;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    animation: moveHill 6s linear infinite;
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 60px;
+    background: #333;
+    animation: moveHill 6s linear infinite;
+}
+
+.line {
+    position: absolute;
+    top: 25px;
+    width: 200%;
+    height: 5px;
+    background: repeating-linear-gradient(
+        to right,
+        white 0px,
+        white 40px,
+        transparent 40px,
+        transparent 80px
+    );
+    animation: moveLine 2s linear infinite;
+}
+
+@keyframes moveLine {
+    from { transform: translateX(0); }
+    to { transform: translateX(-80px); }
+}
+
+@keyframes moveHill {
+    from { left: 0; }
+    to { left: -100%; }
+}
+
+.car {
+    position: absolute;
+    bottom: 80px;
+    left: 200px;
+    width: 120px;
+    height: 50px;
+    background: red;
+    border-radius: 10px;
+    animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+.wheel {
+    position: absolute;
+    bottom: -20px;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    animation: rotateWheel 1s linear infinite;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+@keyframes rotateWheel {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}

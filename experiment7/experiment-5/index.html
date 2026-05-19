@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Employee salary management system</h2>
+
+        <input type="text" id="employeeName" placeholder="Enter employee name"><br>
+        <input type="text" id="employeeID" placeholder="Enter employee ID"><br>
+        <input type="number" id="employeeSalary" placeholder="Enter employee salary"><br>
+        <input type="text" id="department" placeholder="Enter employee department"><br>
+
+        <button onclick="AddEmployee()">Add Employee</button><br>
+        <button onclick="Displayall()">Display all</button>
+        <button onclick="salarycalculator()">Calculate Salary</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
